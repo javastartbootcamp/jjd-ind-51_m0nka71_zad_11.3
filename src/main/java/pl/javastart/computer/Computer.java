@@ -1,4 +1,4 @@
-package pl.javastart.task;
+package pl.javastart.computer;
 
 public class Computer  {
     private Processor processor;

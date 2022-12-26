@@ -1,5 +1,7 @@
 package pl.javastart.task;
 
+import pl.javastart.computer.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,9 +11,8 @@ public class Main {
             HardDrive harddrive = new HardDrive("X8 980", "Samsung", "WRT45", 128);
 
             Computer computer = new Computer(processor, memory, harddrive);
-            processor.setFrequency(300);
-            memory.setFrequency(200);
-        } catch (OverTemperatureException | NullPointerException e) {
+            processor.overclock(200);
+        } catch (OverTemperatureException | IllegalArgumentException e) {
             System.err.println(e.getMessage());
         }
     }

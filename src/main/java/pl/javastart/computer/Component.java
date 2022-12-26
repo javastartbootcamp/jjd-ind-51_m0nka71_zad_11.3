@@ -1,6 +1,6 @@
-package pl.javastart.task;
+package pl.javastart.computer;
 
-public abstract class Component extends RuntimeException {
+public abstract class Component {
     private String modelName;
     private String producer;
     private String serialNumber;
@@ -17,7 +17,7 @@ public abstract class Component extends RuntimeException {
 
     public void setModelName(String modelName) {
         if (modelName == null) {
-            throw new NullPointerException("Podaj poprawną nazwę modelu");
+            throw new IllegalArgumentException("Podaj poprawną nazwę modelu");
         }
         this.modelName = modelName;
     }
@@ -28,7 +28,7 @@ public abstract class Component extends RuntimeException {
 
     public void setProducer(String producer) {
         if (producer == null) {
-            throw new NullPointerException("Podaj poprawną nazwę producenta");
+            throw new IllegalArgumentException("Podaj poprawną nazwę producenta");
         }
         this.producer = producer;
     }
@@ -39,7 +39,7 @@ public abstract class Component extends RuntimeException {
 
     public void setSerialNumber(String serialNumber) {
         if (serialNumber == null) {
-            throw new NullPointerException("Podaj poprawny numer seryjny");
+            throw new IllegalArgumentException("Podaj poprawny numer seryjny");
         }
         this.serialNumber = serialNumber;
     }
